@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input {
+    margin-bottom: 20px;
+    border: 1px solid rgba(40, 40, 70, 0.1);
+    border-radius: 8px;
+    height: 39px;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    color: #000000;
+    opacity: 0.3;
+}
+
+.submit__button {
+    margin: auto;
+}
+
+.submit__button input {
+    background: #29A19C;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FAFAFA;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+}
+
+.submit__button input:hover{
+    cursor: pointer;
+}
+
+

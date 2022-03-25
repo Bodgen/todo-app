@@ -1,0 +1,43 @@
+.wrapper {
+    background: rgba(41, 161, 156, 0.02);
+    border: 1px solid rgba(40, 40, 70, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all;
+}
+
+.content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #282846;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    /*align-items: center;*/
+    position: relative;
+}
+
+
+
+
+.taskName {
+    width: 100%;
+}
+
+.editButton {
+    margin-right: 10px;
+}
+
+.editButton:hover, .deleteButton:hover {
+    cursor: pointer;
+}
+
+.deleteButton {
+    margin-right: 15px;
+}

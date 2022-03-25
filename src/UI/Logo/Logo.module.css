@@ -1,0 +1,15 @@
+.navbar__top {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    color: #29A19C;
+    padding: 20px 20px 60px;
+}
+
+.navbar__top img {
+    padding-right: 10px;
+}

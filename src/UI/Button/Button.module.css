@@ -1,0 +1,19 @@
+.button {
+    display: flex;
+    align-items: center;
+    width: 185px;
+    height: 40px;
+    background: #29A19C;
+    border-radius: 8px;
+    color: #fafafa;
+    font-family: 'Nunito',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button img {
+    margin-right: 10px;
+    margin-left: 20px;
+}

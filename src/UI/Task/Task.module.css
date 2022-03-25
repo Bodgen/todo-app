@@ -1,0 +1,25 @@
+.wrapper {
+    background: #FFFFFF;
+    border: 1px solid rgba(40, 40, 70, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-family: 'Nunito',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #282846;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.taskComplete {
+    text-decoration: line-through;
+}

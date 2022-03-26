@@ -7,6 +7,7 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: all;
+    height: 50px;
 }
 
 .content {
@@ -24,7 +25,9 @@
 }
 
 
-
+.checkbox {
+    margin-right: 10px;
+}
 
 .taskName {
     width: 100%;
@@ -32,6 +35,7 @@
 
 .editButton {
     margin-right: 10px;
+    margin-bottom: auto;
 }
 
 .editButton:hover, .deleteButton:hover {
@@ -40,4 +44,6 @@
 
 .deleteButton {
     margin-right: 15px;
+    margin-bottom: auto;
+
 }

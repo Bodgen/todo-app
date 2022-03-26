@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import MainPage from "./components/MainPage/MainPage";
 import LoginPage from "./components/LoginPage/LoginPage";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
+import ModalWindow from "./components/ModalWindow/ModalWindow";
 
 function App() {
     return (
@@ -12,10 +13,11 @@ function App() {
                 <Navbar/>
                 <div className='container'>
                     <div className='content'>
-                        <ProfilePage/>
+                        <MainPage/>
                     </div>
                 </div>
             </div>
+            {/*<ModalWindow/>*/}
         </div>);
 }
 

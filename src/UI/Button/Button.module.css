@@ -1,20 +1,53 @@
 .button {
+    background-color: #29A19C;
+    padding-right: 25px;
     display: flex;
     align-items: center;
-    /*width: 185px;*/
     height: 40px;
-    background: #29A19C;
     border-radius: 8px;
     color: #fafafa;
-    font-family: 'Nunito',sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    padding-right: 25px;
 }
 
 .button img {
     margin-right: 10px;
     margin-left: 20px;
+}
+.container:hover{
+    cursor:pointer ;
+}
+
+.red__button {
+    background-color: #F05454;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 16px;
+    width: 126px;
+    justify-content: center;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.custom {
+    display: flex;
+    padding-right: 25px;
+}
+
+.functional__button {
+    background-color: #29A19C;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 16px;
+    width: 126px;
+    margin: auto;
+    justify-content: center;
 }

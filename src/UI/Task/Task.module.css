@@ -5,6 +5,7 @@
     border-radius: 10px;
     width: 100%;
     margin-bottom: 10px;
+    height: 50px;
 }
 
 .content {
@@ -22,4 +23,5 @@
 
 .taskComplete {
     text-decoration: line-through;
+    height: 50px;
 }

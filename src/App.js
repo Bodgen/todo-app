@@ -8,16 +8,16 @@ import ModalWindow from "./components/ModalWindow/ModalWindow";
 function App() {
     return (
         <div>
-            {/*/!*<LoginPage/>*!/*/}
-            {/*<div className='wrapper'>*/}
-            {/*    <Navbar/>*/}
-            {/*    <div className='container'>*/}
-            {/*        <div className='content'>*/}
-            {/*            <ProfilePage/>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            <ModalWindow/>
+            {/*<LoginPage/>*/}
+            <div className='wrapper'>
+                <Navbar/>
+                <div className='container'>
+                    <div className='content'>
+                        <MainPage/>
+                    </div>
+                </div>
+            </div>
+            {/*<ModalWindow/>*/}
         </div>);
 }
 

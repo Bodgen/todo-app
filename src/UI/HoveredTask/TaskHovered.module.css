@@ -24,7 +24,9 @@
 }
 
 
-
+.checkbox{
+    margin-right: 10px;
+}
 
 .taskName {
     width: 100%;

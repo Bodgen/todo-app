@@ -9,7 +9,7 @@ const TaskHovered = ({children, checked, setChecked, complete}) => {
         <div className={classes.content}>
             <div onClick={() => {
                 setChecked(!checked)
-            }}>
+            }} className={classes.checkbox}>
                 <CheckBox checked={complete ? !checked : checked}/>
             </div>
             <span className={classes.taskName}>{children}</span>

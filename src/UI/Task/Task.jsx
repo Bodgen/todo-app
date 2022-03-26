@@ -10,7 +10,7 @@ const Task = ({children, checked, setChecked}) => {
         <div className={classes.wrapper}
              onMouseEnter={() => setIsShown(true)}
              onMouseLeave={() => setIsShown(false)}>
-            {!isShown ?
+            {isShown ?
                 <div className={classes.content}>
                     {children}
                 </div> : <TaskHovered checked={checked} setChecked={setChecked}>{children}</TaskHovered>}

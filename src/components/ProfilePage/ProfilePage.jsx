@@ -14,7 +14,7 @@ const ProfilePage = () => {
     return (
         <div className={classes.container}>
             <div className={classes.header}>
-                <Button>Основа с иконкой</Button>
+                <Button img>Основа с иконкой</Button>
                 <div className={classes.user}>
                     Хорошего дня, {username}
                     <img src={avatar} alt="" className={classes.header__avatar}/>

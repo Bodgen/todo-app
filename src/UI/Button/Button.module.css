@@ -5,16 +5,38 @@
     height: 40px;
     background: #29A19C;
     border-radius: 8px;
-    color: #fafafa;
-    font-family: 'Nunito',sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    padding-right: 25px;
+    /*padding-right: 25px;*/
 }
 
-.button img {
+.container img {
     margin-right: 10px;
     margin-left: 20px;
+}
+
+.container span {
+    margin: auto;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+.width {
+    width: 126px;
+    text-align: center;
+}
+
+.red__button {
+    background-color: #F05454;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.container:hover{
+    cursor: pointer;
 }

@@ -16,7 +16,7 @@ const MainPage = () => {
     return (
         <div className={classes.mainPage}>
             <div className={classes.header}>
-                <Button>Новая задача</Button>
+                <Button img>Новая задача</Button>
                 <div className={classes.user}>
                     Хорошего дня, {username}
                     <img src={avatar} alt="" className={classes.header__avatar}/>

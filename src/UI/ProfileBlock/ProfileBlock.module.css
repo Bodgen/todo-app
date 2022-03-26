@@ -1,0 +1,72 @@
+.container {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+    border-radius: 10px;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.avatar img {
+    margin-bottom: 10px;
+}
+
+.avatar a {
+    text-align: center;
+    text-decoration: #29A19C underline;
+    color: #29A19C;
+}
+
+.description {
+    width: 300px;
+}
+
+span {
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+.subscribe {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.subscribe__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #282846;
+    position: absolute;
+    left: 28px;
+    bottom: 3px;
+}
+
+.submit__button input {
+    background-color: #29A19C;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FAFAFA;
+}
+
+input {
+    cursor: pointer;
+}

@@ -10,7 +10,7 @@ const tasks = ['Приготовить вкусный ужин',
 
 const TasksBlock = () => {
 
-    const [checked, setChecked] = useState(true)
+    const [checked, setChecked] = useState(false)
 
     return (
         <div className={classes.wrapper}>

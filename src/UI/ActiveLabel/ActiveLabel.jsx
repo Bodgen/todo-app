@@ -4,7 +4,6 @@ import classes from "./ActiveLabel.module.css";
 const ActiveLabel = () => {
     return (
         <div className={classes.label}>
-
         </div>
     );
 };

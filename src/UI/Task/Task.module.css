@@ -9,7 +9,7 @@
 }
 
 .content {
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -23,5 +23,13 @@
 
 .taskComplete {
     text-decoration: line-through;
-    height: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #282846;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }

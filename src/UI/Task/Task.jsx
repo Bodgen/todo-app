@@ -2,18 +2,17 @@ import React, {useState} from 'react';
 import classes from './Task.module.css'
 import TaskHovered from "../HoveredTask/TaskHovered";
 
-const Task = ({children, checked, setChecked}) => {
+const Task = ({children, checked, id}) => {
 
     const [isShown, setIsShown] = useState(false)
-
     return (
         <div className={classes.wrapper}
              onMouseEnter={() => setIsShown(true)}
              onMouseLeave={() => setIsShown(false)}>
             {!isShown ?
-                <div className={classes.content}>
+                <div className={checked ? classes.taskComplete : classes.content}>
                     {children}
-                </div> : <TaskHovered checked={checked} setChecked={setChecked}>{children}</TaskHovered>}
+                </div> : <TaskHovered taskId={id} checked={checked} >{children}</TaskHovered>}
         </div>
     );
 };

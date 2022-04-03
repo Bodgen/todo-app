@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 0,
+      "text": "Приготовить вкусный ужин",
+      "isComplete": true
+    },
+    {
+      "id": 1,
+      "text": "Устранить засор в раковине",
+      "isComplete": true
+    },
+    {
+      "id": 2,
+      "text": "Стирка белого белья",
+      "isComplete": false
+    }
+  ]
+}

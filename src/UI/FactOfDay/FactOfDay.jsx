@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './FactOfDay.module.css'
 
 const FactOfDay = () => {
+
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>

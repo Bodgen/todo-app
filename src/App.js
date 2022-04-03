@@ -1,23 +1,32 @@
 import './App.css';
-import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import MainPage from "./components/MainPage/MainPage";
-import LoginPage from "./components/LoginPage/LoginPage";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
-import ModalWindow from "./components/ModalWindow/ModalWindow";
+import {Route, Routes} from "react-router-dom";
+import {useEffect} from "react";
+import {getTasks} from "./redux/actions/tasks";
+import {useDispatch} from "react-redux";
 
 function App() {
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(getTasks())
+    },[])
+
     return (
         <div>
-            {/*<LoginPage/>*/}
             <div className='wrapper'>
-                <Navbar/>
+                <Sidebar/>
                 <div className='container'>
                     <div className='content'>
-                        <MainPage/>
+                        <Routes>
+                            <Route path='/' element={<MainPage/>}/>
+                            <Route path='/user' element={<ProfilePage/>}/>
+                        </Routes>
                     </div>
                 </div>
             </div>
-            {/*<ModalWindow/>*/}
         </div>);
 }
 

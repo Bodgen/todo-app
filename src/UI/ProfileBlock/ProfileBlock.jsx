@@ -9,7 +9,7 @@ const ProfileBlock = ({username, email}) => {
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.avatar}>
-                    <img src={avatar}/>
+                    <img src={avatar} alt/>
                     <a href='#'>изменить фото</a>
                 </div>
                 <div className={classes.description}>

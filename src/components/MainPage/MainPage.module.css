@@ -5,8 +5,12 @@
     width: 24px;
     height: 24px;
     background-color: #fafafa;
-    box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+    box-shadow: 0 10px 25px rgba(29, 52, 54, 0.08);
     border-radius: 5px;
+}
+
+.header_userMenu img{
+    margin: auto;
 }
 
 .mainPage {
@@ -23,6 +27,8 @@
     display: flex;
     align-items: center;
 }
+
+
 
 .header__avatar {
     margin: 0 20px;

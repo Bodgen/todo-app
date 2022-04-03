@@ -1,16 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './Tasks.module.css'
 import Task from "../Task/Task";
-import TaskHovered from "../HoveredTask/TaskHovered";
-
-const tasks = ['Приготовить вкусный ужин',
-    'Устранить засор в раковине',
-    'Стирка белого белья',
-    'Разморозить холодильник']
+import {useSelector} from "react-redux";
 
 const TasksBlock = () => {
 
-    const [checked, setChecked] = useState(false)
+    const items = useSelector(state => state.task.items)
 
     return (
         <div className={classes.wrapper}>
@@ -19,9 +14,21 @@ const TasksBlock = () => {
                     Активные задачи
                 </h2>
                 <div>
-                    {tasks.map((task, index) =>
-                        <Task checked={checked} setChecked={setChecked}>{task}</Task>)}
+                    {items.map((e, index) =>
+                        !e.isComplete &&
+                        <Task key={`${e}_${index}`} checked={e.isComplete} id={e.id}>{e.text}</Task>)}
                 </div>
+                {items.length === 0 ?
+                    null : (<div><h2 className={classes.title}>
+                        Завершенные задачи
+                    </h2>
+                        <div>
+                            {items.map((e, index) =>
+                                e.isComplete &&
+                                <Task key={`${e}_${index}`} checked={e.isComplete} id={e.id}>{e.text}</Task>
+                            )}
+                        </div>
+                    </div>)}
             </div>
         </div>
     );

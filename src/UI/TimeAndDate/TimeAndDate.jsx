@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './TimeAndDate.module.css'
 import clock from '../../assets/img/clock.svg'
 import calendar from '../../assets/img/calendar.svg'
 // import Clock from 'react-live-clock'
 
 const TimeAndDate = () => {
-    let date = new Date()
-
-    const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля',
-        'августа', 'сентября', 'октября', 'ноября', 'декабря']
+    const [dateState, setDateState] = useState(new Date());
+    useEffect(() => {
+        setInterval(() => setDateState(new Date()), 1000);
+    }, []);
 
     return (
         <div className={classes.wrapper}>
@@ -19,14 +19,22 @@ const TimeAndDate = () => {
                         <p>На часах у нас</p>
                         <div className={classes.item}>
                             <img src={clock} alt=""/>
-                            {/*<Clock format="HH:mm:ss" interval={1000} ticking={true}/>*/}
+                            {dateState.toLocaleString('ru-RU',{
+                                hour:'numeric',
+                                minute:'numeric',
+                                second:'numeric',
+                                hour12:false
+                            })}
                         </div>
                     </div>
                     <div>
                         <p>А сегодня у нас</p>
                         <div className={classes.item}>
                             <img src={calendar} alt=""/>
-                            {date.getDate()} {month[date.getMonth()]} {date.getFullYear()}
+                            {dateState.toLocaleDateString('ru-RU',{
+                                day:'numeric',
+                                month:'long',
+                            })} {dateState.getFullYear()}
                         </div>
                     </div>
                 </div>

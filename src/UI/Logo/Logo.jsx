@@ -6,7 +6,7 @@ import logo from '../../assets/img/logo.svg'
 const Logo = () => {
     return (
         <div className={classes.navbar__top}>
-            <img src={logo}/>Tasks<br/>Book
+            <img src={logo} alt=''/>Tasks<br/>Book
         </div>
     );
 };

@@ -3,13 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
+import LoginPage from "./components/LoginPage/LoginPage";
+import store from "./redux/store";
+
 
 ReactDOM.render(
+    <React.StrictMode>
         <Router>
-            <App/>
-        </Router>,
+            <Provider store={store}>
+                <Routes>
+                    <Route path='*' element={<App/>}/>
+                    <Route path='/login' element={<LoginPage/>}/>
+                </Routes>
+            </Provider>
+        </Router>
+    </React.StrictMode>,
     document.getElementById('root')
 );
 

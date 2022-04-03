@@ -61,12 +61,13 @@ ul {
     margin-right: 10px;
 }
 
-.active {
-    background: #29A19C;
-    border-radius: 10px 0px 0px 10px;
-    width: 30px;
-    height: 18px;
-    position: absolute;
-    right: 0;
-    margin: 2px;
+a.active {
+    /*background: #29A19C;*/
+    /*border-radius: 10px 0px 0px 10px;*/
+    /*width: 30px;*/
+    /*height: 18px;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*margin: 2px;*/
+    color: red;
 }

@@ -1,21 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './TaskHovered.module.css'
-import edit from '../../assets/img/edit.svg'
 import trash from '../../assets/img/trash.svg'
 import CheckBox from "../CheckBox/CheckBox";
+import {useDispatch} from "react-redux";
+import { toggleIsComplete} from "../../redux/reducers/tasks";
+import {deleteTask} from "../../redux/reducers/tasks";
 
-const TaskHovered = ({children, checked, setChecked, complete}) => {
+const TaskHovered = ({children, checked, complete, taskId}) => {
+
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(deleteTask(taskId))
+    }
+
+    const handleIsComplete = () => {
+        dispatch(toggleIsComplete(taskId))
+    }
+
+
     return (
         <div className={classes.content}>
-            <div onClick={() => {
-                setChecked(!checked)
-            }} className={classes.checkbox}>
+            <div onClick={handleIsComplete} className={classes.checkbox}>
                 <CheckBox checked={complete ? !checked : checked}/>
             </div>
             <span className={classes.taskName}>{children}</span>
-            {!complete &&
-                <img className={classes.editButton} src={edit} alt=""/>}
-            <img className={classes.deleteButton} src={trash} alt=""/>
+            <img className={classes.deleteButton} src={trash} alt="" onClick={handleClick}/>
         </div>
     );
 };

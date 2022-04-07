@@ -74,3 +74,11 @@ a {
 .blockContainer{
     padding: 20px;
 }
+
+.blockTitle{
+     font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #29A19C;
+    margin: 0 0 20px 0;
+}

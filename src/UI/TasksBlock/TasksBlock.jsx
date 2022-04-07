@@ -10,7 +10,7 @@ const TasksBlock = () => {
     return (
         <div className={classes.wrapper}>
             <div className='blockContainer'>
-                <h2 className={classes.title}>
+                <h2 className='blockTitle'>
                     Активные задачи
                 </h2>
                 <div>
@@ -19,7 +19,7 @@ const TasksBlock = () => {
                         <Task key={`${e}_${index}`} checked={e.completed} id={e.id}>{e.title}</Task>)}
                 </div>
                 {items && items.length === 0 ?
-                    null : (<div><h2 className={classes.title}>
+                    null : (<div><h2 className='blockTitle'>
                         Завершенные задачи
                     </h2>
                         <div>

@@ -13,7 +13,7 @@ const TimeAndDate = () => {
     return (
         <div className={classes.wrapper}>
             <div className='blockContainer'>
-                <h2 className={classes.title}>Такс такс такс</h2>
+                <h2 className='blockTitle'>Такс такс такс</h2>
                 <div className={classes.content}>
                     <div className={classes.part}>
                         <p>На часах у нас</p>

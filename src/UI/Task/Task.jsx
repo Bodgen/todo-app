@@ -10,9 +10,9 @@ const Task = ({children, checked, id}) => {
              onMouseEnter={() => setIsShown(true)}
              onMouseLeave={() => setIsShown(false)}>
             {!isShown ?
-                <div className={checked ? classes.taskComplete : classes.content}>
+                <div className={checked ? `${classes.task} ${classes.taskComplete}` : classes.task}>
                     {children}
-                </div> : <TaskHovered taskId={id} checked={checked} >{children}</TaskHovered>}
+                </div> : <TaskHovered taskId={id} checked={checked}>{children}</TaskHovered>}
         </div>
     );
 };

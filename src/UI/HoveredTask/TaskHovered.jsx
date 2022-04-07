@@ -3,8 +3,7 @@ import classes from './TaskHovered.module.css'
 import trash from '../../assets/img/trash.svg'
 import CheckBox from "../CheckBox/CheckBox";
 import {useDispatch} from "react-redux";
-import { toggleIsComplete} from "../../redux/reducers/tasks";
-import {deleteTask} from "../../redux/reducers/tasks";
+import {deleteTask, toggleIsComplete} from "../../redux/actions/tasks.action";
 
 const TaskHovered = ({children, checked, complete, taskId}) => {
 

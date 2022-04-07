@@ -8,7 +8,6 @@ import {Provider} from 'react-redux'
 import LoginPage from "./components/LoginPage/LoginPage";
 import store from "./redux/store";
 
-
 ReactDOM.render(
     <React.StrictMode>
         <Router>
@@ -17,6 +16,7 @@ ReactDOM.render(
                     <Route path='*' element={<App/>}/>
                     <Route path='/login' element={<LoginPage/>}/>
                 </Routes>
+                {/*<App/>*/}
             </Provider>
         </Router>
     </React.StrictMode>,

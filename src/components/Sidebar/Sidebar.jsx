@@ -7,9 +7,13 @@ import work from '../../assets/img/work.svg'
 import ActiveLabel from '../../UI/ActiveLabel/ActiveLabel';
 import Logo from '../../UI/Logo/Logo';
 import {Link} from 'react-router-dom';
+import {useDispatch} from "react-redux";
+import {setAuth} from "../../redux/actions/auth.action";
 
 
 const Sidebar = () => {
+
+    const dispatch = useDispatch()
 
     const menuItems = [
         {name: 'Задачи', path: work, url: '/'},
@@ -21,6 +25,13 @@ const Sidebar = () => {
     const onChangeActive = (id) => {
         setActiveItem(id)
     }
+
+    const handleLogout = ()=>{
+        dispatch(setAuth(false))
+    }
+
+
+
     return (
         <div className={classes.navbar}>
             <Link to='/'>
@@ -35,13 +46,13 @@ const Sidebar = () => {
                         <li onClick={() => onChangeActive(index)} key={`${index}_${item.name}`}>
                             {activeItem === index ?
                                 <ActiveLabel/> : ''}
-                            <MenuItem  path={item.path} url={item.url}>{item.name}
+                            <MenuItem setActiveItem={onChangeActive} path={item.path} url={item.url}>{item.name}
                             </MenuItem>
                         </li>)}
                 </ul>
             </div>
             <Link to='/login'>
-                <div className={classes.navbar__footer}>
+                <div className={classes.navbar__footer} onClick={handleLogout}>
                     <img src={logout} alt=''/>
                     Выйти
                 </div>

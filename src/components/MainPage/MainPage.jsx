@@ -6,15 +6,15 @@ import TasksBlock from "../../UI/TasksBlock/TasksBlock";
 import TimeAndDate from "../../UI/TimeAndDate/TimeAndDate";
 import FactOfDay from "../../UI/FactOfDay/FactOfDay";
 import ModalWindow from "../ModalWindow/ModalWindow";
+import {useSelector} from "react-redux";
 
 
 const MainPage = () => {
-    const username = 'admin'
     const [show, setShow] = useState(false)
-
     const handleClick = () => {
         setShow(!show)
     }
+    const user = useSelector(state => state.auth.user)
     return (
         <div className={classes.mainPage}>
             <div className={classes.header}>
@@ -23,7 +23,7 @@ const MainPage = () => {
                 </div>
                 <ModalWindow onClose={() => setShow(false)} show={show}/>
                 <div className={classes.user}>
-                    Хорошего дня, {username}
+                    Хорошего дня, {user?.username}
                     <img src={avatar} alt="" className={classes.header__avatar}/>
                 </div>
             </div>

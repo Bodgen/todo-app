@@ -20,7 +20,7 @@
 
 .label {
     background: #29A19C;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0 0 10px;
     width: 30px;
     height: 18px;
     position: absolute;

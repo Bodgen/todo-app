@@ -13,14 +13,11 @@
 .content {
     font-weight: 400;
     font-size: 14px;
-    line-height: 19px;
-    letter-spacing: 0.02em;
     color: #282846;
     margin-top: 15px;
     margin-left: 15px;
     margin-bottom: 15px;
     display: flex;
-    /*align-items: center;*/
     position: relative;
 }
 

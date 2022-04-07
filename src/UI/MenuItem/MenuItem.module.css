@@ -9,13 +9,11 @@
     cursor: pointer;
 }
 
-
 .categories__item {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
 }
 
 .label {

@@ -2,14 +2,14 @@ li {
     list-style: none;
 }
 
-h2,p,span{
+h2, p, span {
     margin: 0;
     padding: 0;
 }
 
 a {
     text-decoration: none;
-    color:black;
+    color: black;
     margin: 0;
     padding: 0;
 }
@@ -71,14 +71,13 @@ a {
     margin: 20px 70px 36px 70px;
 }
 
-.blockContainer{
+.blockContainer {
     padding: 20px;
 }
 
-.blockTitle{
-     font-weight: 600;
+.blockTitle {
+    font-weight: 600;
     font-size: 18px;
-    line-height: 25px;
     color: #29A19C;
     margin: 0 0 20px 0;
 }

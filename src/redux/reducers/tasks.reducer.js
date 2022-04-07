@@ -1,17 +1,32 @@
-import {ADD_TASK, DELETE_TASK, SET_TASKS, TOGGLE_IS_COMPLETE, UPDATE_NEW_TASK_TEXT} from "../actions/tasks";
+import {ADD_TASK, DELETE_TASK, SET_TASKS, TOGGLE_IS_COMPLETE, UPDATE_NEW_TASK_TEXT} from "../actions/tasks.action";
 
 const initialState = {
-    items: [],
+    items: [{
+        id: 0,
+        title: "Приготовить вкусный ужин",
+        completed: true
+    },
+        {
+            id: 1,
+            title: "Устранить засор в раковине",
+            completed: true
+        },
+        {
+            id: 2,
+            title: "Стирка белого белья",
+            completed: false
+        }],
     newTaskText: ''
 }
+
 
 const tasksReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TASK:
             const newItem = {
                 id: new Date(),
-                text: state.newTaskText,
-                isComplete: false
+                title: state.newTaskText,
+                complete: false
             }
             return {
                 ...state,
@@ -39,7 +54,7 @@ const tasksReducer = (state = initialState, action) => {
                 ...state,
                 items: state.items.map(item => {
                     if (item.id === action.payload) {
-                        return {...item, isComplete: !item.isComplete}
+                        return {...item, completed: !item.completed}
                     }
                     return item
                 })
@@ -54,10 +69,5 @@ const tasksReducer = (state = initialState, action) => {
     }
 
 }
-export const setTasks = (tasks) => ({type: SET_TASKS, payload: tasks})
-export const addTask = () => ({type: ADD_TASK})
-export const updateNewTaskText = (task) => ({type: UPDATE_NEW_TASK_TEXT, payload: task})
-export const deleteTask = id => ({type: DELETE_TASK, payload: id})
-export const toggleIsComplete = (id) => ({type: TOGGLE_IS_COMPLETE, payload: id})
 
 export default tasksReducer

@@ -1,15 +1,23 @@
 import React from 'react';
 import classes from "./MenuItem.module.css";
-import {Link} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 
-const MenuItem = ({children, path,url}) => {
+const MenuItem = ({children, path,url,setActiveItem}) => {
+
+    const location = useLocation()
+
+    if (location.pathname==='/')
+        setActiveItem(0)
+    else if(location.pathname==='/user'){
+        setActiveItem(1)
+    }
     return (
-        <Link to={url}>
+        <NavLink to={url}>
             <div className={classes.categories__item}>
                 <img src={path} alt=''/>
                 {children}
             </div>
-        </Link>
+        </NavLink>
     );
 };
 

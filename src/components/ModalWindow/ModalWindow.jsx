@@ -4,16 +4,16 @@ import Button from "../../UI/Button/Button";
 import ReactDOM from "react-dom";
 import {CSSTransition} from "react-transition-group";
 import {useDispatch, useSelector} from "react-redux";
-import {addTask, updateNewTaskText} from "../../redux/reducers/tasks";
+import {updateNewTaskText} from "../../redux/actions/tasks.action";
+import {addTask} from '../../redux/actions/tasks.action'
 
 const ModalWindow = ({show, onClose}) => {
     const dispatch = useDispatch();
-
     const taskText = useSelector(state => state.task.newTaskText)
 
-    const onSubmit = data => {
-        dispatch(addTask(data.text))
-        onClose();
+    const onSubmit = () => {
+        dispatch(addTask())
+        onClose()
     }
 
     const onNewTaskChange = (e) => {
@@ -43,7 +43,7 @@ const ModalWindow = ({show, onClose}) => {
                         <h2 className={classes.title}>
                             Добавить новую задачу
                         </h2>
-                        <form onSubmit={onSubmit}>
+                        <form>
                             <div className={classes.form}>
                                 <span>Что нужно сделать?</span>
                                 <input onChange={onNewTaskChange} value={taskText}/>

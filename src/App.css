@@ -70,3 +70,7 @@ a {
     display: flex;
     margin: 20px 70px 36px 70px;
 }
+
+.blockContainer{
+    padding: 20px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Tasks.module.css'
+import classes from './TasksBlock.module.css'
 import Task from "../Task/Task";
 import {useSelector} from "react-redux";
 
@@ -9,7 +9,7 @@ const TasksBlock = () => {
 
     return (
         <div className={classes.wrapper}>
-            <div className={classes.container}>
+            <div className='blockContainer'>
                 <h2 className={classes.title}>
                     Активные задачи
                 </h2>

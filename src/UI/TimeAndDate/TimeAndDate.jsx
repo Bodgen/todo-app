@@ -12,18 +12,18 @@ const TimeAndDate = () => {
 
     return (
         <div className={classes.wrapper}>
-            <div className={classes.container}>
+            <div className='blockContainer'>
                 <h2 className={classes.title}>Такс такс такс</h2>
                 <div className={classes.content}>
                     <div className={classes.part}>
                         <p>На часах у нас</p>
                         <div className={classes.item}>
                             <img src={clock} alt=""/>
-                            {dateState.toLocaleString('ru-RU',{
-                                hour:'numeric',
-                                minute:'numeric',
-                                second:'numeric',
-                                hour12:false
+                            {dateState.toLocaleString('ru-RU', {
+                                hour: 'numeric',
+                                minute: 'numeric',
+                                second: 'numeric',
+                                hour12: false
                             })}
                         </div>
                     </div>
@@ -31,9 +31,9 @@ const TimeAndDate = () => {
                         <p>А сегодня у нас</p>
                         <div className={classes.item}>
                             <img src={calendar} alt=""/>
-                            {dateState.toLocaleDateString('ru-RU',{
-                                day:'numeric',
-                                month:'long',
+                            {dateState.toLocaleDateString('ru-RU', {
+                                day: 'numeric',
+                                month: 'long',
                             })} {dateState.getFullYear()}
                         </div>
                     </div>

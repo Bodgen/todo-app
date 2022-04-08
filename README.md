@@ -15,4 +15,4 @@ Data for testing:<br>
 Email:admin@gmail.com<br>
 Password:qwerty123<br>
 
-### This project was not created for commercial use, only to demonstrate my skills and practice
+### This project was not created for commercial use, only to demonstrate my skills and for practice

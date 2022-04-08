@@ -1,5 +1,5 @@
 export const SET_AUTH = 'SET_AUTH'
-export const SET_USER = 'SET_USER'
+export const SET_NEW_DATA = 'SET_NEW_DATA'
 
 export const setAuth = (value) => ({type: SET_AUTH, payload: value})
-export const setUser = (user) => ({type: SET_USER, payload: user})
+export const setNewData = (data) => ({type: SET_NEW_DATA, payload: data})
